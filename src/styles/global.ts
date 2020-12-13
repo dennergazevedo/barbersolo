@@ -6,6 +6,7 @@ export default createGlobalStyle`
     padding: 0;
     outline: 0;
     box-sizing: border-box;
+    max-width: 100vw !important;
   }
 
   body {
@@ -13,7 +14,7 @@ export default createGlobalStyle`
   }
 
   body, input, button {
-    font-family: 'Roboto Slab', serif;
+    font-family: 'Montserrat';
     font-size: 16px;
   }
 

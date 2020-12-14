@@ -36,7 +36,9 @@ const Contact: React.FC = () => {
         cidade: 'BARBEADOR',
         mensagem,
       });
-      window.alert('Mensagem enviada com sucesso!');
+      if (window.confirm('Mensagem enviada com sucesso!')) {
+        window.location.reload();
+      }
     } catch (err) {
       window.alert('Não foi possível entregar a mensagem, tente novamente.');
     }

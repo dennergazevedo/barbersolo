@@ -2,6 +2,7 @@
 /* eslint-disable jsx-a11y/media-has-caption */
 import React, { useState, useEffect } from 'react';
 import Slide from 'react-slideshow-inputon';
+import { Link } from 'react-scroll';
 
 // STYLED COMPONENTS
 import {
@@ -38,6 +39,11 @@ const Home: React.FC = () => {
     }
   }, [width]);
 
+  function handleSmooth(id: string) {
+    const element = document.getElementById(id);
+    if (element) element.click();
+  }
+
   return (
     <Container>
       <Navbar />
@@ -51,28 +57,47 @@ const Home: React.FC = () => {
           <br />
           PODE
         </TextBanner>
+        <Link
+          activeClass="active"
+          to="imgProduct1"
+          spy
+          smooth
+          offset={-70}
+          duration={500}
+          id="smooth1"
+        />
         <SaibaMais
           initial={{ y: width > 800 ? -100 : 140 }}
           animate={{ y: width > 800 ? -200 : 200, opacity: 1 }}
           transition={{ ease: 'easeOut', duration: 1.5 }}
+          onClick={() => handleSmooth('smooth1')}
         >
           SAIBA MAIS...
         </SaibaMais>
       </Banner>
       <Product>
         <Item>
-          <New>NOVO</New>
+          <New id="imgProduct1">NOVO</New>
           <Title>BARBER SOLO</Title>
           <Subtitle>•ONEBLADE•</Subtitle>
           <Describe>Proteja a sua pele.</Describe>
-          <Button>SAIBA MAIS...</Button>
+          <Link
+            activeClass="active"
+            to="imgProduct2"
+            spy
+            smooth
+            offset={-70}
+            duration={500}
+            id="smooth2"
+          />
+          <Button onClick={() => handleSmooth('smooth2')}>SAIBA MAIS...</Button>
         </Item>
         <img src="https://i.imgur.com/oRC01yA.png" alt="cicle" />
         <ProductImg src="https://i.imgur.com/irqWbuY.png" alt="PRODUCT" />
       </Product>
       <Ajust>
         <Item>
-          <New>100% AJUSTÁVEL</New>
+          <New id="imgProduct2">100% AJUSTÁVEL</New>
           <Title style={{ marginTop: '30px' }}>3 TAMANHOS DISPONÍVEIS</Title>
           <Subtitle>•ONEBLADE•</Subtitle>
           <Describe>Ajuste ao seu gosto.</Describe>

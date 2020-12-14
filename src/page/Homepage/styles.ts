@@ -119,6 +119,7 @@ export const Title = styled.span`
   color: #4c4d8b;
   font-style: italic;
   font-weight: 700;
+  text-align: center;
 
   @media only screen and (min-width: 800px) {
     font-size: 50px;
@@ -135,6 +136,7 @@ export const Describe = styled.span`
   display: flex;
   font-size: 24px;
   margin-top: 20px;
+  text-align: center;
 
   @media only screen and (min-width: 800px) {
     font-size: 40px;
@@ -171,10 +173,82 @@ export const Button = styled.div`
 export const ProductImg = styled(motion.img)`
   height: 380px !important;
   position: absolute;
-  margin-top: 120px !important;
+  margin-top: 124px !important;
 
   @media only screen and (min-width: 800px) {
     right: 250px;
     margin-top: 10px !important;
+  }
+`;
+
+export const Ajust = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  @media only screen and (min-width: 1000px) {
+    flex-direction: row-reverse;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+    padding-left: 100px;
+    padding-right: 100px;
+    align-items: flex-start;
+  }
+
+  img {
+    height: auto;
+    width: 90vw;
+    margin-top: 30px;
+
+    @media only screen and (min-width: 800px) {
+      width: 500px;
+      margin-top: 0px;
+    }
+  }
+
+  .complete {
+    width: 100vw !important;
+
+    @media only screen and (min-width: 1000px) {
+      width: 700px !important;
+    }
+  }
+`;
+
+export const PhotoDiv = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  @media only screen and (min-width: 1000px) {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+    padding-left: 100px;
+    padding-right: 100px;
+    align-items: flex-start;
+  }
+
+  img {
+    height: auto;
+    width: 90vw;
+    margin-top: 30px;
+
+    @media only screen and (min-width: 800px) {
+      width: 500px;
+      margin-top: 0px;
+    }
+  }
+
+  .complete {
+    width: 100vw !important;
+
+    @media only screen and (min-width: 1000px) {
+      width: 700px !important;
+    }
   }
 `;

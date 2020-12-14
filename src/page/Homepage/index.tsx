@@ -16,10 +16,13 @@ import {
   Describe,
   Button,
   ProductImg,
+  Ajust,
+  PhotoDiv,
 } from './styles';
 
 // COMPONENTS
-import Navbar from '../components/Navbar';
+import Navbar from '../../components/Navbar';
+import Footer from '../../components/Footer';
 
 const Home: React.FC = () => {
   const { width } = window.screen;
@@ -65,6 +68,30 @@ const Home: React.FC = () => {
         <img src="https://i.imgur.com/oRC01yA.png" alt="cicle" />
         <ProductImg src="https://i.imgur.com/irqWbuY.png" alt="PRODUCT" />
       </Product>
+      <Ajust>
+        <Item>
+          <New>100% AJUSTÁVEL</New>
+          <Title style={{ marginTop: '30px' }}>3 TAMANHOS DISPONÍVEIS</Title>
+          <Subtitle>•ONEBLADE•</Subtitle>
+          <Describe>Ajuste ao seu gosto.</Describe>
+        </Item>
+        <img src="https://i.imgur.com/syXAMtn.png" alt="IMG" />
+      </Ajust>
+      <PhotoDiv>
+        <Item>
+          <New style={{ width: width > 800 ? '100%' : '100vw' }}>
+            FÁCIL DE APARAR
+          </New>
+          <Title>• ONEBLADE •</Title>
+          <Describe>Monte o seu estilo, valorize o seu tempo.</Describe>
+        </Item>
+        <img
+          src="https://imgur.com/G3bWdZA.gif"
+          alt="cicle"
+          className="complete"
+        />
+      </PhotoDiv>
+      <Footer />
     </Container>
   );
 };

@@ -1,8 +1,8 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 /* eslint-disable jsx-a11y/media-has-caption */
 import React, { useState, useEffect } from 'react';
-import Slide from 'react-slideshow-inputon';
 import { Link } from 'react-scroll';
+import Slide from '../../components/Destaque';
 
 // STYLED COMPONENTS
 import {
@@ -125,12 +125,7 @@ const Home: React.FC = () => {
       </PhotoDiv>
       <Sale>
         <span className="title">• ONEBLADE •</span>
-        <Slide>
-          <img src="https://i.imgur.com/U4yRBFZ.png" alt="FOTO" />
-          <img src="https://i.imgur.com/H3sZ9B7.png" alt="FOTO" />
-          <img src="https://i.imgur.com/jPoLxQI.png" alt="FOTO" />
-          <img src="https://i.imgur.com/opvh1NN.png" alt="FOTO" />
-        </Slide>
+        <Slide />
         <span className="price">
           <b>R$</b>
           189,90

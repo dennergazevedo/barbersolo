@@ -44,6 +44,7 @@ export const Body = styled.div`
   box-shadow: 1px 1px 10px #3335;
   border-radius: 10px;
   z-index: 10;
+  margin: 20px;
 
   span {
     b {
@@ -97,6 +98,15 @@ export const Form = styled.form`
       padding: 0px 0px 0px 10px;
       border: none;
       border-left: 1px solid #3335;
+    }
+
+    textarea {
+      font-size: 12px;
+      padding: 0px 0px 0px 10px;
+      border: none;
+      border-left: 1px solid #3335;
+      height: 100px;
+      resize: none;
     }
   }
 

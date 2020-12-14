@@ -252,3 +252,70 @@ export const PhotoDiv = styled.div`
     }
   }
 `;
+
+export const Sale = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 20px;
+
+  img {
+    height: 350px;
+    width: auto;
+    margin-top: 20px;
+  }
+
+  button {
+    padding: 10px 30px;
+    background-color: #4c4d8b;
+    color: #fff;
+    border: none;
+    margin: 20px;
+    font-weight: 600;
+    font-size: 12px;
+
+    &:hover {
+      background-color: rgb(76, 77, 139, 0.9);
+    }
+  }
+
+  .price {
+    font-size: 45px;
+    color: #4c4d8b;
+    font-weight: 700;
+    margin-top: 20px;
+    margin-top: -50px;
+
+    b {
+      font-size: 20px;
+      margin-right: 5px;
+    }
+  }
+
+  .subtitle {
+    font-size: 12px;
+    text-align: center;
+  }
+
+  .subtitleParc {
+    font-size: 18px;
+    text-align: center;
+    margin-top: 10px;
+    color: #4c4d8b;
+    font-weight: 600;
+  }
+
+  .title {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    padding: 10px;
+    font-size: 18px;
+    font-weight: 600;
+    color: #fff;
+    background-color: #4c4d8b;
+  }
+`;

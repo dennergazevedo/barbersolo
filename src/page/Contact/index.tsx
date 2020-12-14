@@ -2,12 +2,17 @@
 import React from 'react';
 
 // ICONS
-import { FaRegEnvelope } from 'react-icons/fa';
+import {
+  FaRegEnvelope,
+  FaUser,
+  FaPhone,
+  FaRegCommentDots,
+} from 'react-icons/fa';
 
 // STYLED COMPONENTS
 import { Container, Body, Logomarca, Form, Background } from './styles';
 
-const ForgotPass: React.FC = () => {
+const Contact: React.FC = () => {
   const { width } = window.screen;
   return (
     <Container>
@@ -17,19 +22,40 @@ const ForgotPass: React.FC = () => {
       <Body>
         <Logomarca src="https://i.imgur.com/dPQ6El0.png" alt="LOGO" />
         <span>
-          <b>Perdeu a sua senha?</b>
+          <b>Ficou com alguma dúvida?</b>
           <br />
-          Recupere agora mesmo.
+          Preencha o formulário a baixo que nossa equipe irá te ajudar.
         </span>
         <Form>
+          <div>
+            <FaUser className="icon" />
+            <input placeholder="Nome Completo" />
+          </div>
+
           <div>
             <FaRegEnvelope className="icon" />
             <input placeholder="exemplo@email.com" />
           </div>
+
+          <div>
+            <FaPhone className="icon" />
+            <input placeholder="(99)9 9999-9999" />
+          </div>
+
+          <div>
+            <FaRegCommentDots className="icon" />
+            <input placeholder="Assunto" />
+          </div>
+
+          <div>
+            <FaRegCommentDots className="icon" />
+            <textarea placeholder="Assunto" />
+          </div>
+
           <button type="submit" className="signIn">
-            RECUPERAR SENHA
+            ENVIAR
           </button>
-          <a href="/login" className="signUp">
+          <a href="/" className="signUp">
             VOLTAR
           </a>
         </Form>
@@ -40,4 +66,4 @@ const ForgotPass: React.FC = () => {
     </Container>
   );
 };
-export default ForgotPass;
+export default Contact;

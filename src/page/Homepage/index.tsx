@@ -1,6 +1,7 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 /* eslint-disable jsx-a11y/media-has-caption */
 import React, { useState, useEffect } from 'react';
+import Slide from 'react-slideshow-inputon';
 
 // STYLED COMPONENTS
 import {
@@ -18,6 +19,7 @@ import {
   ProductImg,
   Ajust,
   PhotoDiv,
+  Sale,
 } from './styles';
 
 // COMPONENTS
@@ -91,6 +93,25 @@ const Home: React.FC = () => {
           className="complete"
         />
       </PhotoDiv>
+      <Sale>
+        <span className="title">• ONEBLADE •</span>
+        <Slide>
+          <img src="https://i.imgur.com/U4yRBFZ.png" alt="FOTO" />
+          <img src="https://i.imgur.com/H3sZ9B7.png" alt="FOTO" />
+          <img src="https://i.imgur.com/jPoLxQI.png" alt="FOTO" />
+          <img src="https://i.imgur.com/opvh1NN.png" alt="FOTO" />
+        </Slide>
+        <span className="price">
+          <b>R$</b>
+          189,90
+        </span>
+        <span className="subtitleParc">ATÉ 12x NO CARTÃO</span>
+        <button type="button">COMPRAR AGORA</button>
+        <span className="subtitle">
+          SUA COMPRA ESTÁ PROTEGIDA PELO NOSSO PARCEIRO
+          <b> MERCADO PAGO</b>
+        </span>
+      </Sale>
       <Footer />
     </Container>
   );

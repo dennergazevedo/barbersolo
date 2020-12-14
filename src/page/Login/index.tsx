@@ -56,6 +56,9 @@ const Login: React.FC = () => {
       <span className="footer">
         &copy; {new Date().getFullYear()} &nbsp; BarberSolo
       </span>
+      <a href="/" className="back">
+        VOLTAR PARA PÁGINA INICIAL
+      </a>
     </Container>
   );
 };

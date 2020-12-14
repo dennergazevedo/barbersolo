@@ -50,10 +50,17 @@ export const SaibaMais = styled(motion.div)`
   cursor: pointer;
   font-weight: 600;
   opacity: 0;
+  position: absolute;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
 
   @media only screen and (min-width: 800px) {
     font-size: 30px;
     padding: 15px 40px;
+    top: 100%;
   }
 
   &:hover {
@@ -70,7 +77,7 @@ export const Product = styled.div`
   width: 100%;
   padding-left: 200px;
   padding-right: 200px;
-  margin-bottom: 50px;
+  margin-top: 30px;
 
   @media only screen and (max-width: 800px) {
     flex-direction: column;
@@ -84,7 +91,7 @@ export const Product = styled.div`
     margin-top: 30px;
 
     @media only screen and (min-width: 800px) {
-      margin-top: 0;
+      margin-top: 0px;
     }
   }
 `;

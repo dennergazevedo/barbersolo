@@ -47,7 +47,8 @@ const Home: React.FC = () => {
           PODE
         </TextBanner>
         <SaibaMais
-          animate={{ y: width > 800 ? -150 : -80, opacity: 1 }}
+          initial={{ y: width > 800 ? -100 : 140 }}
+          animate={{ y: width > 800 ? -200 : 200, opacity: 1 }}
           transition={{ ease: 'easeOut', duration: 1.5 }}
         >
           SAIBA MAIS...

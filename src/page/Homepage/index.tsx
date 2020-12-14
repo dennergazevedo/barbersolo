@@ -45,8 +45,7 @@ const Home: React.FC = () => {
   }
 
   function handleBuy() {
-    window.location.href =
-      'https://barbersolo.pay.yampi.com.br/checkout?skipToCheckout=1&tokenReference=FFL87GSVZE';
+    window.location.href = 'https://barbersolo.pay.yampi.com.br/r/FFL87GSVZE';
   }
 
   return (

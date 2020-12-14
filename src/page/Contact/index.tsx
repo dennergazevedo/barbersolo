@@ -1,5 +1,7 @@
+/* eslint-disable no-restricted-globals */
+/* eslint-disable no-alert */
 /* eslint-disable react/jsx-one-expression-per-line */
-import React from 'react';
+import React, { useState } from 'react';
 
 // ICONS
 import {
@@ -12,7 +14,34 @@ import {
 // STYLED COMPONENTS
 import { Container, Body, Logomarca, Form, Background } from './styles';
 
+// API
+import api from '../../services/api';
+
 const Contact: React.FC = () => {
+  const [email, setEmail] = useState('');
+  const [nome, setNome] = useState('');
+  const [phone, setPhone] = useState('');
+  const [assunto, setAssunto] = useState('');
+  const [mensagem, setMensagem] = useState('');
+
+  async function handleContact() {
+    event?.preventDefault();
+    try {
+      await api.post('/contact', {
+        email,
+        nome,
+        produto: 'BARBEADOR',
+        phone,
+        assunto,
+        cidade: 'BARBEADOR',
+        mensagem,
+      });
+      window.alert('Mensagem enviada com sucesso!');
+    } catch (err) {
+      window.alert('Não foi possível entregar a mensagem, tente novamente.');
+    }
+  }
+
   const { width } = window.screen;
   return (
     <Container>
@@ -29,30 +58,50 @@ const Contact: React.FC = () => {
         <Form>
           <div>
             <FaUser className="icon" />
-            <input placeholder="Nome Completo" />
+            <input
+              placeholder="Nome Completo"
+              value={nome}
+              onChange={e => setNome(e.target.value)}
+            />
           </div>
 
           <div>
             <FaRegEnvelope className="icon" />
-            <input placeholder="exemplo@email.com" />
+            <input
+              placeholder="exemplo@email.com"
+              value={email}
+              onChange={e => setEmail(e.target.value)}
+            />
           </div>
 
           <div>
             <FaPhone className="icon" />
-            <input placeholder="(99)9 9999-9999" />
+            <input
+              placeholder="(99)9 9999-9999"
+              value={phone}
+              onChange={e => setPhone(e.target.value)}
+            />
           </div>
 
           <div>
             <FaRegCommentDots className="icon" />
-            <input placeholder="Assunto" />
+            <input
+              placeholder="Assunto"
+              value={assunto}
+              onChange={e => setAssunto(e.target.value)}
+            />
           </div>
 
           <div>
             <FaRegCommentDots className="icon" />
-            <textarea placeholder="Assunto" />
+            <textarea
+              placeholder="Mensagem"
+              value={mensagem}
+              onChange={e => setMensagem(e.target.value)}
+            />
           </div>
 
-          <button type="submit" className="signIn">
+          <button type="submit" className="signIn" onClick={handleContact}>
             ENVIAR
           </button>
           <a href="/" className="signUp">

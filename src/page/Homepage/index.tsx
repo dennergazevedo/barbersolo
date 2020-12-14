@@ -44,6 +44,11 @@ const Home: React.FC = () => {
     if (element) element.click();
   }
 
+  function handleBuy() {
+    window.location.href =
+      'https://barbersolo.pay.yampi.com.br/checkout?skipToCheckout=1&tokenReference=FFL87GSVZE';
+  }
+
   return (
     <Container>
       <Navbar />
@@ -131,7 +136,9 @@ const Home: React.FC = () => {
           189,90
         </span>
         <span className="subtitleParc">ATÉ 12x NO CARTÃO</span>
-        <button type="button">COMPRAR AGORA</button>
+        <button type="button" onClick={handleBuy}>
+          COMPRAR AGORA
+        </button>
         <span className="subtitle">
           SUA COMPRA ESTÁ PROTEGIDA PELO NOSSO PARCEIRO
           <b> MERCADO PAGO</b>
